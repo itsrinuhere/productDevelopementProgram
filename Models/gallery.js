@@ -13,7 +13,7 @@ let gallerySchema = new Schema(
       type: String,
     },
     contentType:{
-        
+        type:String
     }
   },
   { timestamps: true }

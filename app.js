@@ -19,7 +19,6 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '/')));
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
-const mongooseobject = require("mongoose");
 const { error } = require('console');
 router.get('/',function(req,res){
   var ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress
