@@ -6,6 +6,15 @@ const router = express.Router();
 const env = require('dotenv').config();
 //declaration of variables
 const passsword = process.env.password
+mongoose.connect("mongodb+srv://admin:"+passsword+"@cluster0.qrgfq.mongodb.net/ProductDevelopementProgram?retryWrites=true&w=majority",{
+useNewUrlParser:true,useUnifiedTopology:true
+},(err=>{
+  if(err){
+    console.log(error);
+  }else{
+    console.log("connected successfuly");
+  }
+}))
 
 // parse requests of content-type - application/json
 app.use(express.json());
